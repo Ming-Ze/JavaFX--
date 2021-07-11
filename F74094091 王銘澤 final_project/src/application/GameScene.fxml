@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #777171;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
+   <children>
+      <Button fx:id="reset" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset_click" prefHeight="36.0" prefWidth="150.0" style="-fx-background-radius: 30;" text="RESET/START">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="answer" alignment="CENTER" layoutX="59.0" layoutY="92.0" prefHeight="36.0" prefWidth="164.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="54.0" layoutY="50.0" prefHeight="36.0" prefWidth="173.0" text="Your guess：" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="enter" layoutX="190.0" layoutY="330.0" mnemonicParsing="false" onAction="#enter_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="enter" />
+      <Button fx:id="zero" alignment="CENTER" layoutX="39.0" layoutY="330.0" mnemonicParsing="false" onAction="#zero_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="one" alignment="CENTER" layoutX="39.0" layoutY="269.0" mnemonicParsing="false" onAction="#one_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="two" alignment="CENTER" layoutX="116.0" layoutY="269.0" mnemonicParsing="false" onAction="#two_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="three" alignment="CENTER" layoutX="190.0" layoutY="269.0" mnemonicParsing="false" onAction="#three_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="3">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="four" alignment="CENTER" layoutX="39.0" layoutY="212.0" mnemonicParsing="false" onAction="#four_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="4">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="five" alignment="CENTER" layoutX="116.0" layoutY="212.0" mnemonicParsing="false" onAction="#five_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="5">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="six" alignment="CENTER" layoutX="190.0" layoutY="212.0" mnemonicParsing="false" onAction="#six_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="6">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="seven" alignment="CENTER" layoutX="39.0" layoutY="154.0" mnemonicParsing="false" onAction="#seven_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="7">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="eight" alignment="CENTER" layoutX="116.0" layoutY="154.0" mnemonicParsing="false" onAction="#eight_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="8">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="nine" alignment="CENTER" layoutX="190.0" layoutY="154.0" mnemonicParsing="false" onAction="#nine_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="177.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_click" prefHeight="30.0" prefWidth="75.0" style="-fx-background-radius: 30;" text="BACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="backSpace" layoutX="116.0" layoutY="330.0" mnemonicParsing="false" onAction="#backSpace_click" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30;" text="&lt;--" />
+      <TextArea fx:id="pastGuess" editable="false" layoutX="300.0" layoutY="60.0" prefHeight="265.0" prefWidth="280.0" style="-fx-text-alignment: TOP-CENTER;" text="  Press RESET/START">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextArea>
+      <RadioButton fx:id="digit3" layoutX="300.0" layoutY="17.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="3 digit" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="digit" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="digit4" layoutX="402.0" layoutY="17.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="4 digit" textFill="WHITE" toggleGroup="$digit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="digit5" layoutX="504.0" layoutY="17.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="5 digit" textFill="WHITE" toggleGroup="$digit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="giveUp" layoutX="365.0" layoutY="337.0" mnemonicParsing="false" onAction="#giveUp_click" prefHeight="36.0" prefWidth="150.0" style="-fx-background-radius: 30;" text="GIVE UP">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
